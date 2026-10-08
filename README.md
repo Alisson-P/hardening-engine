@@ -86,7 +86,7 @@ flowchart TD
     REV --> NOME["Our own name<br/>in plain language"]
     NOME --> SEV["Severity<br/>4 cascading layers"]
     SEV --> DES["Composed description<br/>built from our own labels"]
-    DES --> REM["Remediation<br/>5 validation layers"]
+    DES --> REM["Remediation<br/>6 validation layers"]
     REM --> CAT[("Catalog<br/>the knowledge base")]
     CAT --> SCA["Checker<br/>read only"]
     CAT --> BAN["Test bench<br/>proves the command<br/>on a throwaway machine"]
@@ -195,8 +195,9 @@ thing.
 | Domains | 17 |
 | Items with our own name, severity and description | 2,756 |
 | Severity decision layers | 4 |
-| Command validation layers | 5 |
-| Items the checker verifies on its own | 721 |
+| Command validation layers | 6 |
+| Items the checker has a reading for | 653 |
+| Readings refused for not measuring the item | 97 |
 | Bench cases ready | 716 |
 
 And the caveats, because they travel with the numbers:
@@ -206,6 +207,14 @@ signal of their own in the text or in the name. It is not wrong, but it is
 weaker than the rest, and every item records which layer decided for it,
 precisely so that difference stays visible instead of disappearing into the
 table.
+
+Having a reading is not the same as giving a verdict. A reading only gives one
+when it measures what the item asks for: a reading that always answers
+something, like whether a service is enabled when the item is about how it is
+configured, does not get to approve anything. On Linux, 59 readings give a
+verdict today, each one measuring its item; the others come out as "could not
+be checked" until they are rebuilt and proven on a real machine. The Windows
+readings have not been through that measurement yet.
 
 And the stage of building images that are born compliant, which is where the
 project is headed, has not started yet.

@@ -83,7 +83,7 @@ flowchart TD
     REV --> NOME["Nome proprio<br/>em linguagem comum"]
     NOME --> SEV["Gravidade<br/>4 camadas em cascata"]
     SEV --> DES["Descricao composta<br/>a partir de rotulos proprios"]
-    DES --> REM["Remediacao<br/>5 camadas de validacao"]
+    DES --> REM["Remediacao<br/>6 camadas de validacao"]
     REM --> CAT[("Catalogo<br/>a base de conhecimento")]
     CAT --> SCA["Verificador<br/>somente leitura"]
     CAT --> BAN["Bancada<br/>prova o comando<br/>em maquina descartavel"]
@@ -193,8 +193,9 @@ verificado nada.
 | Domínios | 17 |
 | Itens com nome, gravidade e descrição próprios | 2.756 |
 | Camadas de decisão da gravidade | 4 |
-| Camadas de validação do comando | 5 |
-| Itens que o verificador confere sozinho | 721 |
+| Camadas de validação do comando | 6 |
+| Itens com leitura no verificador | 653 |
+| Leituras recusadas por não medirem o item | 97 |
 | Casos de bancada prontos | 716 |
 
 E as ressalvas, porque elas viajam junto com os números:
@@ -203,6 +204,14 @@ Uma parte dos itens recebeu gravidade só pelo piso do domínio, sem sinal
 próprio no texto nem no nome. Não está errado, mas é mais fraco que o resto, e
 cada item guarda qual camada decidiu por ele, justamente para que essa
 diferença fique visível em vez de sumir na tabela.
+
+Ter leitura não é o mesmo que dar veredito. A leitura só dá veredito quando
+mede o que o item pede: a que sempre responde alguma coisa, como dizer se um
+serviço está habilitado quando o item fala de como ele está configurado, não
+aprova nada. No Linux, 59 leituras dão veredito hoje, cada uma medindo o seu
+item; as outras saem como "não foi possível conferir" até serem refeitas e
+provadas em máquina de verdade. As leituras do Windows ainda não passaram por
+essa medida.
 
 E a etapa de construir imagens que já nascem em conformidade, que é o destino
 do projeto, ainda não começou.
