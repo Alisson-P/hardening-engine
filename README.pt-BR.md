@@ -2,7 +2,7 @@
 
 ### Uma base própria de endurecimento de sistemas, e um verificador que prefere dizer "não sei" a acusar errado
 
-[English](README.md) · **Português**
+[English](README.md) · **Português** | [Variante JEV](https://github.com/Alisson-P/hardening-engine-jev)
 
 > Um relatório que acusa errado uma vez perde a autoridade de acusar certo nas
 > próximas.
