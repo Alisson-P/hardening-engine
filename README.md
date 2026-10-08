@@ -2,7 +2,7 @@
 
 ### A hardening baseline of my own, and a checker that would rather say "I don't know" than accuse wrongly
 
-**English** · [Português](README.pt-BR.md)
+**English** · [Português](README.pt-BR.md) | [JEV variant](https://github.com/Alisson-P/hardening-engine-jev)
 
 > A report that accuses wrongly once loses the standing to accuse rightly next
 > time.
